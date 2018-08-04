@@ -1,0 +1,15 @@
+{
+  "name": "tic-tac-toe",
+  "version": "1.0.0",
+  "description": "Command Line Tic-tac-toe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "rupesh",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.3.1",
+    "prompt": "^1.0.0"
+  }
+}
