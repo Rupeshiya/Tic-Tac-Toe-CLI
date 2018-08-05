@@ -21,9 +21,9 @@ function makeBoard(position,mark){
 
 function printBoard(){
   console.log(colors.green.bold('\n'+
-  ' '+board[1] + ' | ' + board[2] + ' | '+ board[3] +'\n' +
-  ' '+board[4] + ' | ' + board[5] + ' | '+ board[6] + '\n' +
-  ' '+board[7] + ' | ' + board[8] + ' | '+ board[9] + '\n'
+  '                             '+board[1] + ' | ' + board[2] + ' | '+ board[3] +'\n' +
+  '                             '+board[4] + ' | ' + board[5] + ' | '+ board[6] + '\n' +
+  '                             '+board[7] + ' | ' + board[8] + ' | '+ board[9] + '\n'
 ));
 }
 /////////////////function to check the value//////
@@ -96,7 +96,7 @@ function checkwin(player){
    });
  }
  console.log(colors.green.bold('Game started : \n'+
-              ' 1 | 2 | 3 \n'+
-              ' 4 | 5 | 6 \n'+
-              ' 7 | 8 | 9 \n'));
+              '                              1 | 2 | 3 \n'+
+              '                              4 | 5 | 6 \n'+
+              '                              7 | 8 | 9 \n'));
               playerTurn('X');
