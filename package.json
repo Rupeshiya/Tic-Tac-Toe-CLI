@@ -2,7 +2,10 @@
   "name": "tic-tac-toe",
   "version": "1.0.0",
   "description": "Command Line Tic-tac-toe",
-  "main": "index.js",
+  "main": "./bin/index.js",
+  "bin": {
+    "tic_tac": "./bin/index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
