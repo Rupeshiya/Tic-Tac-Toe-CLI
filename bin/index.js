@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var prompt = require('prompt');
 var colors = require('colors');
  var board = {
@@ -78,9 +80,9 @@ function checkwin(player){
      {
        makeBoard(res.position,player);
        printBoard();
-       if(checkwin(player)  === true)
+       if(checkwin(player)===true)
        {
-         console.log(colors.green.bold(`Winner Winner!! player ${player}`));
+         console.log(colors.green.bold('Winner Winner!!'));
          return;
        }
        if(player === 'X')
