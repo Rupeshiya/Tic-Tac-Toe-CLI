@@ -22,6 +22,7 @@ function makeBoard(position,mark){
 ////////////function to print board to console/////////
 
 function printBoard(board){
+  console.log('\x1Bc');
   console.log(colors.green.bold('\n'+
   '                             '+board[1] + ' | ' + board[2] + ' | '+ board[3] +'\n' +
   '                             '+board[4] + ' | ' + board[5] + ' | '+ board[6] + '\n' +
