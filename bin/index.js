@@ -19,15 +19,24 @@ function makeBoard(position,mark){
 }
 
 
-////////////function to print to console/////////
+////////////function to print board to console/////////
 
-function printBoard(){
+function printBoard(board){
+  console.log('\x1Bc');
   console.log(colors.green.bold('\n'+
   '                             '+board[1] + ' | ' + board[2] + ' | '+ board[3] +'\n' +
   '                             '+board[4] + ' | ' + board[5] + ' | '+ board[6] + '\n' +
   '                             '+board[7] + ' | ' + board[8] + ' | '+ board[9] + '\n'
-));
+  ));
 }
+
+
+////////////function to print message to console/////////
+
+function printMessage(message){
+  console.log(colors.green.bold(message));
+}
+
 /////////////////function to check the value//////
 function isInt(value){
   var x;
@@ -60,7 +69,7 @@ function checkwin(player){
           count++;
           if(count === 0)
           {
-            console.log(colors.green.bold('Game Tie'));
+            printMessage('Game Tie');
             return;
           }
           return true;
@@ -73,16 +82,16 @@ function checkwin(player){
  //   for(var i=0; i< winCombinations[i].lengt;h)
  // }
  function playerTurn(player){
-   console.log('Your turn player: ',player);
+   printMessage('Your turn player: ' + player);
    prompt.start();
    prompt.get(['position'],function(err,res){
      if(validate(res.position) === true)
      {
        makeBoard(res.position,player);
-       printBoard();
+       printBoard(board);
        if(checkwin(player)===true)
        {
-         console.log(colors.green.bold('Winner Winner!!'));
+         printMessage('Winner Winner!!');
          return;
        }
        if(player === 'X')
@@ -92,13 +101,22 @@ function checkwin(player){
          playerTurn('X');
        }
      }else {
-       console.log(colors.green.bold('incorrect input please try again..'));
+       printMessage('Incorrect input please try again..');
        playerTurn(player);
      }
    });
  }
- console.log(colors.green.bold('Game started : \n'+
-              '                              1 | 2 | 3 \n'+
-              '                              4 | 5 | 6 \n'+
-              '                              7 | 8 | 9 \n'));
-              playerTurn('X');
+
+printBoard({
+   1: '1',
+   2: '2',
+   3: '3',
+   4: '4',
+   5: '5',
+   6: '6',
+   7: '7',
+   8: '8',
+   9: '9'
+});
+printMessage('Game started!');
+playerTurn('X');
